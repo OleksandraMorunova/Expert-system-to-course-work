@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".Views.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/parentRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/corner_relative_layout"
+        android:radius="10dp">
+
+        <TextView
+            android:id="@+id/text_as_add_facts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:text="@string/add_facts"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wrapper_of_variable"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_as_add_facts"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:hint="@string/select_your_variable"
+            app:boxBackgroundColor="#1AC4C4C4"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeWidth="0.5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/label_for_input_variable"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:inputType="none"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wrapper_of_value"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wrapper_of_variable"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:hint="@string/enter_value"
+            app:boxBackgroundColor="#1AC4C4C4"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeWidth="0.5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/label_for_input_value"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:inputType="textAutoCorrect"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_questions"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wrapper_of_value"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:hint="@string/your_question"
+            app:boxBackgroundColor="#1AC4C4C4"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            app:boxStrokeWidth="0.5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/input_question"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:inputType="none"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_as_select_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_questions"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/select_add_fact_for_started_work_with_get_start_now"
+            android:textColor="@color/icon_text_blue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/group_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_as_select_button"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <com.example.myapplication.button.MaterialButton
+                android:id="@+id/left_button_get_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_android_black_24dp"
+                android:drawableTint="@color/white"
+                android:text="@string/get_start_now"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/bottom_purple"
+                app:cornerBottomEndRadius="0dp"
+                app:cornerTopEndRadius="0dp"
+                app:rippleColor="@color/top_pink" />
+
+            <com.example.myapplication.button.MaterialButton
+                android:id="@+id/right_button_add_fact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_android_black_24dp"
+                android:drawableTint="@color/white"
+                android:text="@string/add_fact1"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/icon_text_blue"
+                app:cornerBottomStartRadius="0dp"
+                app:cornerTopStartRadius="0dp"
+                app:rippleColor="@color/icon_text_blue"
+                app:strokeColor="@color/bottom_purple"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_result_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group_button"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="@string/conditions"
+            android:textColor="@color/icon_text_blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_below="@+id/text_result_conditions"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp">
+
+            <ListView
+                android:id="@+id/list"
+                style="@android:style/Widget.ListView.White"
+                android:layout_width="wrap_content"
+                android:layout_height="172dp"
+                android:layout_below="@+id/text_result_conditions"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:drawSelectorOnTop="false"
+                android:fontFamily="serif" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/text_result_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swipe_refresh"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="@string/your_vehicle"
+            android:textColor="@color/bottom_purple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/list_of_result_by_backward_chaining"
+            style="@android:style/Widget.ListView.White"
+            android:layout_width="391dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/text_result_vehicle"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:drawSelectorOnTop="false"
+            android:fontFamily="serif" />
+    </RelativeLayout>
+</RelativeLayout>

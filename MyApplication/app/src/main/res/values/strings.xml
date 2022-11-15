@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Course Work</string>
+    <string name="button">Button</string>
+    <string name="get_start_now">Get start now</string>
+    <string name="add_fact">Add fact</string>
+    <string name="label">label</string>
+    <string name="enter_value">Enter value</string>
+    <string name="enter_variable">Enter variable</string>
+    <string name="add_rules">Add rules:</string>
+    <string name="add_rules1">Add rules</string>
+    <string name="add_fact1">Add fact</string>
+    <string name="conditions">Conditions</string>
+    <string name="select_add_fact_for_started_work_with_get_start_now">Select \'Add fact\' for started work with \'Get start now\'.</string>
+    <string name="your_vehicle">Your vehicle</string>
+    <string name="add_facts">Add facts</string>
+    <string name="select_your_variable">Select your variable</string>
+    <string name="your_question">Your question</string>
+</resources>

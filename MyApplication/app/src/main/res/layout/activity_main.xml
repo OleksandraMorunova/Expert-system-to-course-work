@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.MainActivity">
+
+    <ListView
+        android:id="@+id/list"
+        style="@android:style/Widget.DeviceDefault.ListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:drawSelectorOnTop="false" />
+
+    <LinearLayout
+        android:id="@+id/groupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/list"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.example.myapplication.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_android_black_24dp"
+            android:drawableTint="@color/icon_text_blue"
+            android:text="@string/get_start_now"
+            android:textColor="@color/icon_text_blue"
+            app:backgroundTint="@color/bottom_purple"
+            app:cornerBottomEndRadius="0dp"
+            app:cornerTopEndRadius="0dp"
+            app:rippleColor="@color/icon_text_blue" />
+
+        <com.example.myapplication.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_android_black_24dp"
+            android:drawableTint="@color/bottom_purple"
+            android:text="@string/add_fact"
+            android:textColor="@color/bottom_purple"
+            app:backgroundTint="?android:colorBackground"
+            app:cornerBottomStartRadius="0dp"
+            app:cornerTopStartRadius="0dp"
+            app:rippleColor="@color/icon_text_blue"
+            app:strokeColor="@color/bottom_purple"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+</RelativeLayout>
